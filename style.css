@@ -1,0 +1,672 @@
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   VARIÁVEIS
+========================================= */
+
+:root{
+
+    --cor-primaria: #2563eb;
+
+    --cor-secundaria: #0891b2;
+
+    --texto-principal: #0f172a;
+
+    --texto-secundario: #334155;
+
+    --fundo-body: #94a3b8;
+
+    --fundo-gradiente:
+        linear-gradient(
+            135deg,
+            #64748b,
+            #94a3b8,
+            #7c93b6
+        );
+
+    --fundo-card:
+        rgba(226,232,240,0.82);
+
+    --fundo-card-hover:
+        rgba(235,241,248,0.92);
+
+    --header-bg:
+        rgba(15,23,42,0.96);
+
+    --borda-clara:
+        rgba(255,255,255,0.18);
+
+    --sombra-card:
+        0 12px 30px rgba(15,23,42,0.18);
+
+    --sombra-hover:
+        0 18px 40px rgba(15,23,42,0.22);
+
+    --tag-bg: #cbd5e1;
+
+    --tag-texto: #1e40af;
+
+    --input-bg: rgba(226,232,240,0.90);
+
+    --input-borda: #64748b;
+
+    --transicao: all 0.3s ease;
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+.dark{
+
+    --texto-principal: #f8fafc;
+
+    --texto-secundario: #cbd5e1;
+
+    --fundo-body: #0f172a;
+
+    --fundo-card:
+        rgba(30,41,59,0.88);
+
+    --fundo-card-hover:
+        rgba(30,41,59,0.95);
+
+    --header-bg:
+        rgba(2,6,23,0.96);
+
+    --tag-bg: #16313d;
+
+    --tag-texto: #7ddcff;
+
+    --input-bg: #1e293b;
+
+    --input-borda: #334155;
+}
+
+/* =========================================
+   BODY
+========================================= */
+
+body{
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--fundo-body);
+
+    color: var(--texto-principal);
+
+    line-height: 1.6;
+
+    transition: var(--transicao);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+header{
+
+    background: var(--header-bg);
+
+    backdrop-filter: blur(12px);
+
+    padding: 18px 20px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+nav{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+nav h1{
+
+    color: white;
+
+    font-size: 28px;
+}
+
+nav ul{
+
+    display: flex;
+
+    gap: 25px;
+
+    list-style: none;
+}
+
+nav a{
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: var(--transicao);
+}
+
+nav a:hover{
+
+    color: var(--cor-secundaria);
+}
+
+/* =========================================
+   BOTÃO
+========================================= */
+
+#tema-btn{
+
+    padding: 10px 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px 20px;
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            rgba(37,99,235,0.18),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            rgba(8,145,178,0.18),
+            transparent 35%
+        ),
+
+        var(--fundo-gradiente);
+}
+
+.hero-card{
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    display: flex;
+
+    gap: 60px;
+
+    align-items: center;
+
+    padding: 60px;
+
+    border-radius: 28px;
+
+    background: var(--fundo-card);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid var(--borda-clara);
+
+    box-shadow: var(--sombra-card);
+
+    transition: var(--transicao);
+}
+
+.hero-card:hover{
+
+    transform: translateY(-6px);
+
+    background: var(--fundo-card-hover);
+}
+
+.hero-texto{
+
+    flex: 1;
+}
+
+.mini-titulo{
+
+    color: var(--cor-secundaria);
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.hero-texto h2{
+
+    font-size: 68px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.hero-texto span{
+
+    color: var(--cor-primaria);
+}
+
+.descricao{
+
+    color: var(--texto-secundario);
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    margin-bottom: 35px;
+
+    text-align: justify;
+}
+
+.btn{
+
+    display: inline-block;
+
+    padding: 16px 34px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-weight: 600;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cor-secundaria),
+            var(--cor-primaria)
+        );
+}
+
+.hero-imagem{
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.hero-imagem img{
+
+    width: 330px;
+
+    height: 330px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid var(--cor-secundaria);
+}
+
+/* =========================================
+   SEÇÕES
+========================================= */
+
+.secao{
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 100px 20px;
+}
+
+.secao h2{
+
+    text-align: center;
+
+    font-size: 42px;
+
+    margin-bottom: 60px;
+}
+
+/* =========================================
+   SOBRE
+========================================= */
+
+.sobre-container{
+
+    display: flex;
+
+    gap: 50px;
+}
+
+.sobre-texto{
+
+    flex: 1;
+}
+
+.sobre-texto p{
+
+    margin-bottom: 25px;
+
+    line-height: 1.9;
+
+    text-align: justify;
+
+    color: var(--texto-secundario);
+}
+
+.sobre-texto strong{
+
+    color: var(--cor-primaria);
+}
+
+.sobre-cards{
+
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 20px;
+}
+
+.sobre-card,
+.card,
+.projeto{
+
+    background: var(--fundo-card);
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    border: 1px solid var(--borda-clara);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: var(--sombra-card);
+
+    transition: var(--transicao);
+}
+
+.sobre-card:hover,
+.card:hover,
+.projeto:hover{
+
+    transform: translateY(-6px);
+
+    background: var(--fundo-card-hover);
+}
+
+.icone{
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   FORMAÇÃO / PROJETOS
+========================================= */
+
+.cards-formacao,
+.projetos{
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px,1fr));
+
+    gap: 25px;
+}
+
+.card h3,
+.projeto h3,
+.sobre-card h3{
+
+    color: var(--cor-primaria);
+
+    margin-bottom: 15px;
+}
+
+.card p,
+.projeto p,
+.sobre-card p{
+
+    color: var(--texto-secundario);
+
+    text-align: justify;
+}
+
+/* =========================================
+   TECNOLOGIAS
+========================================= */
+
+.tecnologias{
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    margin-bottom: 15px;
+
+    padding: 8px 14px;
+
+    border-radius: 30px;
+
+    background: var(--tag-bg);
+
+    color: var(--tag-texto);
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+form{
+
+    max-width: 700px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+input,
+textarea{
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--input-borda);
+
+    background: var(--input-bg);
+
+    color: var(--texto-principal);
+}
+
+textarea{
+
+    height: 180px;
+}
+
+form button{
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    color: white;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cor-secundaria),
+            var(--cor-primaria)
+        );
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+
+    text-align: center;
+
+    padding: 30px;
+
+    background: var(--header-bg);
+
+    color: white;
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media(max-width: 992px){
+
+    .hero-card{
+
+        flex-direction: column-reverse;
+
+        text-align: center;
+    }
+
+    .hero-texto h2{
+
+        font-size: 52px;
+    }
+
+    .sobre-container{
+
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 768px){
+
+    nav{
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav ul{
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .hero-texto h2{
+
+        font-size: 42px;
+    }
+
+    .sobre-cards{
+
+        grid-template-columns: 1fr;
+    }
+
+    .hero-imagem img{
+
+        width: 240px;
+
+        height: 240px;
+    }
+}
+
+/* =========================================
+   LINKS CONTATO
+========================================= */
+
+.contatos{
+
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.contato-link{
+
+    text-decoration: none;
+
+    color: var(--texto-principal);
+
+    background: var(--fundo-card);
+
+    border: 1px solid var(--borda-clara);
+
+    padding: 14px 22px;
+
+    border-radius: 14px;
+
+    font-weight: 600;
+
+    transition: var(--transicao);
+
+    box-shadow: var(--sombra-card);
+}
+
+.contato-link:hover{
+
+    transform: translateY(-4px);
+
+    color: var(--cor-primaria);
+
+    box-shadow: var(--sombra-hover);
+}
