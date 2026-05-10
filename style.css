@@ -670,3 +670,14 @@ footer{
 
     box-shadow: var(--sombra-hover);
 }
+
+#mensagem-status{
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    font-weight: 600;
+
+    font-size: 16px;
+}

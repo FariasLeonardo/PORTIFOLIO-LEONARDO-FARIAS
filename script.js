@@ -94,7 +94,7 @@ formulario.addEventListener("submit", function(event){
     statusMensagem.textContent =
         "Mensagem enviada com sucesso!";
 
-    statusMensagem.style.color = "#22c55e";
+    statusMensagem.style.color = "#16a34a";
 
     /* LIMPAR FORMULÁRIO */
 
